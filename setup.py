@@ -1,7 +1,10 @@
-from setuptools import find_packages, setup 
+from setuptools import find_packages, setup
+from typing import List
 
-def get_requirements(file_path:str)->List[str]:
-     """
+HYPEN_E_DOT = "-e ."
+
+def get_requirements(file_path: str) -> List[str]:
+    """
     Reads the requirements file and returns a list of requirements.
 
     Args:
@@ -10,21 +13,25 @@ def get_requirements(file_path:str)->List[str]:
     Returns:
     List[str]: A list of requirements.
     """
-    requirements=[]
-    with open(file_path) as file_obj:
-        requirements=file_obj.readlines()
-        requirements=[req.replace("\n", "") for req in requirements]
-        
+    requirements = []
+    with open(file_path, "r") as file_obj:
+        for line in file_obj:
+            # Remove whitespace and ignore comments
+            req = line.strip()
+            if req and not req.startswith("#"):  # Skip empty lines and comments
+                requirements.append(req)
+
+        # Exclude '-e .' from the requirements list
         if HYPEN_E_DOT in requirements:
             requirements.remove(HYPEN_E_DOT)
-    
-    return requirements 
+
+    return requirements
 
 setup(
-    name="Xray",  # Name of your project
-    version="0.0.1",  # Version number
-    author="Abdoul Abdillahi",  # Author's name
-    author_email="aabdillahid@gmail.com",  # Author's email
-    install_requires=get_requirements(),  # Requirements file
-    packages=find_packages()  # Automatically find all packages in the project
+    name="Xray",
+    version="0.0.1",
+    author="Abdoul Abdillahi",
+    author_email="aabdillahid@gmail.com",
+    install_requires=get_requirements("requirements_dev.txt"),  # Requirements file
+    packages=find_packages(),
 )

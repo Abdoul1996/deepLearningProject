@@ -1,50 +1,18 @@
-# BentoML - Platform for serving and deploying machine learning models in production
 bentoml
-
-# torchvision - Provides datasets, model architectures, and image processing utilities for PyTorch
 torchvision
-
-# joblib - Library for parallel computing, used for speeding up tasks like model training and data processing
 joblib
-
-# tqdm - Library for creating progress bars, useful in data processing and training loops
 tqdm
-
-# pip-chill - Tool to create minimal requirements files with only explicitly installed packages
 pip-chill
-
-# wincertstore - Helps manage SSL certificates on Windows, useful for secure network operations
 wincertstore
-# pytest - Framework for writing small, scalable tests in Python
 pytest==7.1.3
-
-# tox - Automation tool for testing in multiple environments and configurations
-tox == 3.25.1
-
-# flake8 - Linting tool to check Python code for style guide enforcement (PEP 8), syntax errors, and code quality issues
-flake8== 5.0.4
-
-# mypy - Static type checker for Python, verifies type hints to catch potential type-related errors
-mypy== 0.971
-
-# black - Code formatter that automatically formats Python code to be PEP 8 compliant
+tox==3.25.1
+flake8==5.0.4
+mypy==0.971
 black
-# dvc - Data Version Control, manages and versions large datasets and ML models, enabling reproducibility in machine learning projects
 dvc
-
-# mlflow - Platform to manage the machine learning lifecycle, including experiment tracking, model packaging, and deployment
 mlflow
-
-# ipykernel - Enables the use of Jupyter notebooks in Python, allows notebooks to communicate with the Python kernel
 ipykernel
-
-# pandas - Data manipulation and analysis library, provides data structures like DataFrames for working with structured data
 pandas
-
-# numpy - Library for numerical computing, used for array processing, mathematical functions, and support for large, multidimensional data
 numpy
-
-# seaborn - Data visualization library based on matplotlib, provides high-level interfaces for creating attractive statistical graphics
 seaborn
-
-#-e .  # local env download
+-e .
