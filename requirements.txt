@@ -1,0 +1,8 @@
+bentoml    # BentoML - Platform for serving and deploying machine learning models in production 
+torchvision  # torchvision - Provides datasets, model architectures, and image processing utilities for PyTorch
+joblib          # joblib - Library for parallel computing, used for speeding up tasks like model training and data processing
+tqdm  # visualice process 
+pip-chill    # Tool to create minimal requirements files with only explicitly installed packages
+wincertstore   #  Helps manage SSL certificates on Windows, useful for secure network operations
+
+-e . 
