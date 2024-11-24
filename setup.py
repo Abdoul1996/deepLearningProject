@@ -30,7 +30,7 @@ def get_requirements(file_path: str) -> List[str]:
 setup(
     name="Xray",
     version="0.0.1",
-    author="Abdoul Abdillahi",
+    author="Abdoulfatah Abdillahi",
     author_email="aabdillahid@gmail.com",
     install_requires=get_requirements("/Users/abdoulabdillahi/Desktop/Personal_Project/Deep_Learning_Project /requirements_dev.txt"),  # Requirements file
     packages=find_packages(),
